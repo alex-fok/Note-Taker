@@ -45,7 +45,6 @@ app.post('/api/notes', (req,res) => {
 });
 
 app.delete('/api/notes/:id', (req, res) => {
-    console.log(req.params.id);
     fs.readFile('db/db.json', (err, data) => {
         const {id} = req.params;
         let dataArr = JSON.parse(data);
